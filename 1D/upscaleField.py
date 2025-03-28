@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 class RandomFieldUpscaler:
-    def __init__(self, d, c, beta, domain=(0, 1), fine_res=1000, coarse_res=10):
+    def __init__(self, d, c, beta, domain=(0, 1), fine_res=1000, coarse_res=100):
         self.d = d
         self.c = c
         self.beta = beta
