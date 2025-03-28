@@ -85,7 +85,8 @@ class RandomFieldUpscaler:
 
 
 if __name__ == "__main__":
-    up = RandomFieldUpscaler(d=1.0, c=2.0, beta=0.1, coarse_res=500)
+    domain = (-1,1)
+    up = RandomFieldUpscaler(d=1.0, c=2.0, beta=0.1, coarse_res=500, domain=domain)
     xi = np.random.uniform(0, 2 * np.pi)
     
     # Choose one of: "local_average", "projection_fem", "fourier", "homogenized", "sample_based"
