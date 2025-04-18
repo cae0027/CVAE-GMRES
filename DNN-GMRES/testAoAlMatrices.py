@@ -27,6 +27,8 @@ def testAoAlMatrices(Al, Ao):
     # Apply homogeneous Dirichlet BC
     bc = DirichletBC(V, Constant(0.0), "on_boundary")
     bc.apply(b_vec)
+    # apply boundary conditions to Al and Ao
+    
 
     # Solve with learned matrix
     ilu_l = spilu(Al)
@@ -60,7 +62,7 @@ def testAoAlMatrices(Al, Ao):
     )
     min_val, max_val = min_val-0.1*abs(min_val), max_val+0.05*abs(max_val)
     plot(uo, label="Original")
-    plot(ul, label="Learned", linestyle="--")
+    # plot(ul, label="Learned", linestyle="--")
     plt.legend()
     plt.title("Solution Comparison")
     plt.xlabel("x")

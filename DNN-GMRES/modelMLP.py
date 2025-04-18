@@ -97,7 +97,7 @@ def train_model(model, dataloader, epochs=10, lr=1e-3):
 # --------------------------
 # Stiffness Reconstruction
 # --------------------------
-def reconstruct_stiffness(model, dataset, sample_idx, num_pts=10):
+def reconstruct_stiffness(model, dataset, sample_idx, num_pts=2):
     model.eval()
     model.to(device)
 
